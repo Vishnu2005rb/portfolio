@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #020205;
+  --color-cyber-card: rgba(10, 10, 22, 0.7);
+  --color-cyber-cyan: #00f0ff;
+  --color-cyber-purple: #bd00ff;
+  --color-cyber-green: #00ff66;
+  --color-cyber-dark: #0a0a14;
+  
+  --font-mono: "Space Mono", "Fira Code", monospace;
+  --font-sans: "Inter", "Outfit", sans-serif;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-scanline: scanline 8s linear infinite;
+  --animate-grid-move: gridMove 20s linear infinite;
+  --animate-glitch: glitch 1s steps(2, start) infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1e38;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+  box-shadow: 0 0 8px #00f0ff;
+}
+
+body {
+  background-color: #020205;
+  color: #e2e8f0;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Cyber Utilities */
+@utility text-glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5), 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+@utility text-glow-purple {
+  text-shadow: 0 0 5px rgba(189, 0, 255, 0.5), 0 0 15px rgba(189, 0, 255, 0.3);
+}
+
+@utility text-glow-green {
+  text-shadow: 0 0 5px rgba(0, 255, 102, 0.5), 0 0 15px rgba(0, 255, 102, 0.3);
+}
+
+@utility box-glow-cyan {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2), inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+@utility box-glow-purple {
+  box-shadow: 0 0 10px rgba(189, 0, 255, 0.2), inset 0 0 10px rgba(189, 0, 255, 0.1);
+}
+
+@utility box-glow-cyan-strong {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+@utility box-glow-purple-strong {
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.4), inset 0 0 8px rgba(189, 0, 255, 0.2);
+}
+
+@utility border-cyber-cyan-glow {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+@utility border-cyber-purple-glow {
+  border-color: rgba(189, 0, 255, 0.4);
+  box-shadow: 0 0 8px rgba(189, 0, 255, 0.2);
+}
+
+@utility glassmorphism {
+  background: rgba(10, 10, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility glassmorphism-cyber {
+  background: rgba(5, 5, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+/* Animations */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 40px;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  60% {
+    clip-path: inset(76% 0 5% 0);
+  }
+  80% {
+    clip-path: inset(3% 0 92% 0);
+  }
+  100% {
+    clip-path: inset(54% 0 43% 0);
+  }
+}
+
+/* Scanline Overlay effect */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Grid overlay background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/* Custom Clip Paths for Cyber Edges */
+.clip-cyber-corner {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-cyber-corner-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.clip-cyber-tab {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 10px 100%);
+}
+
+/* Glowing Border Sweep Animation */
+.animated-glow-border {
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.animated-glow-border::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(90deg, #00f0ff, #bd00ff, #00f0ff);
+  background-size: 200% auto;
+  border-radius: 0.5rem;
+  z-index: -1;
+  animation: borderGlowSweep 4s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes borderGlowSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
