@@ -105,7 +105,7 @@ export default function About() {
                   </div>
                   <div className="flex items-center space-x-1.5">
                     <Award className="w-4 h-4 text-cyber-green" />
-                    <span>CGPA: 7.22 / 10.0</span>
+                    <span>CGPA: 7.3 / 10.0</span>
                   </div>
                 </div>
               </div>

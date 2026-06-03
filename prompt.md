@@ -66,7 +66,7 @@ EDUCATION SECTION:
 KLN College of Engineering
 Bachelor of Engineering in Computer Science and Engineering
 2022 – 2026
-CGPA: 7.22/10
+CGPA: 7.3/10
 
 SKILLS SECTION:
 Display skills as glowing futuristic cards.
