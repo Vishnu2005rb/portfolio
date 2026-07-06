@@ -53,7 +53,7 @@ export default function Hero() {
                 className="text-2xl sm:text-3xl md:text-4xl font-mono text-gray-300 font-semibold uppercase flex items-center gap-2"
               >
                 <ChevronRight className="text-cyber-cyan animate-pulse" />
-                <span className="text-glow-purple">AI & Automation Engineer</span>
+                <span className="text-glow-purple">AI & ML Engineer | Generative AI</span>
               </motion.h2>
             </div>
 
@@ -64,7 +64,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-gray-400 text-base sm:text-lg max-w-xl font-sans leading-relaxed"
             >
-              Aspiring AI Engineer building intelligent AI agents, workflow automation systems, and production-ready AI applications.
+              Aspiring AI Engineer with hands-on experience in Machine Learning, Deep Learning, NLP, LLMs, RAG, AI Agents, and workflow automation. Skilled in building intelligent automation and scalable AI systems.
             </motion.p>
 
             {/* Hero CTA buttons */}
@@ -95,7 +95,8 @@ export default function Hero() {
 
               {/* Resume download */}
               <a
-                href="#contact"
+                href="/VISHNU_R_B_Resume.pdf"
+                download="VISHNU_R_B_Resume.pdf"
                 className="px-6 py-3 rounded border border-white/10 hover:border-cyber-cyan/50 hover:bg-cyber-cyan/5 text-gray-300 hover:text-white font-mono text-sm tracking-widest flex items-center space-x-2 transition-all duration-300"
               >
                 <Download className="w-4 h-4 text-cyber-cyan" />

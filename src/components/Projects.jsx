@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Terminal, Cpu, Database, Send, Award } from "lucide-react";
+import { Terminal, Cpu, Database, Send, Award, ExternalLink } from "lucide-react";
 
 // Custom SVG Icons for GitHub and LinkedIn matching the style of Contact.jsx
 const LinkedinIcon = ({ className }) => (
@@ -34,6 +34,13 @@ export default function Projects() {
       tags: ["RAG", "LangChain", "NLP", "AI Agents", "LLMs"],
       svgType: "rag",
       gitLink: "https://github.com/Vishnu2005rb/RAG-PROJECT"
+    },
+    {
+      title: "AI-Based Investment Generator using ML [LR]",
+      description: "Developed a machine learning-based investment recommendation system using Logistic Regression to generate personalized investment suggestions based on user financial profiles.",
+      tags: ["Python", "Scikit-learn", "Machine Learning", "Logistic Regression", "Evaluation Metrics"],
+      svgType: "investment",
+      gitLink: "https://drive.google.com/drive/folders/1AEaY1Jw6xSZvxnGS30a0D76dkexppaCp"
     },
     {
       title: "Multi-AI Agent Telegram Workflow Assistant",
@@ -170,6 +177,40 @@ export default function Projects() {
             <path d="M 250 80 L 295 80" fill="none" stroke="#bd00ff" strokeWidth="1" strokeDasharray="3 3" />
           </svg>
         );
+      case "investment":
+        return (
+          <svg className="w-full h-40 bg-black" viewBox="0 0 400 160">
+            <rect width="100%" height="100%" fill="url(#svg-grid)" />
+            {/* Trend/Regression line */}
+            <line x1="50" y1="120" x2="350" y2="40" stroke="#00f0ff" strokeWidth="1.5" strokeDasharray="2 2" />
+            <path d="M 50 120 L 150 95 L 250 65 L 350 40" fill="none" stroke="#bd00ff" strokeWidth="2" />
+            
+            {/* Data points */}
+            <circle cx="80" cy="115" r="3" fill="#00f0ff" />
+            <circle cx="120" cy="90" r="3" fill="#00ff66" />
+            <circle cx="160" cy="105" r="3" fill="#bd00ff" />
+            <circle cx="200" cy="70" r="3" fill="#00f0ff" />
+            <circle cx="240" cy="80" r="3" fill="#00ff66" />
+            <circle cx="280" cy="50" r="3" fill="#bd00ff" />
+            <circle cx="320" cy="45" r="3" fill="#00f0ff" />
+            
+            {/* Input features node */}
+            <rect x="35" y="20" width="80" height="25" rx="3" fill="#030308" stroke="#00f0ff" strokeWidth="1" />
+            <text x="75" y="36" fill="#00f0ff" fontSize="8" fontFamily="monospace" textAnchor="middle">USER_PROFILE</text>
+            
+            {/* ML Logistic Regression model node */}
+            <rect x="150" y="20" width="100" height="25" rx="3" fill="#030308" stroke="#bd00ff" strokeWidth="1" />
+            <text x="200" y="36" fill="#bd00ff" fontSize="8" fontFamily="monospace" textAnchor="middle">LR_MODEL_FIT</text>
+            
+            {/* Output investment recommendation node */}
+            <rect x="285" y="20" width="80" height="25" rx="3" fill="#030308" stroke="#00ff66" strokeWidth="1" />
+            <text x="325" y="36" fill="#00ff66" fontSize="8" fontFamily="monospace" textAnchor="middle">RECOMMEND_OUT</text>
+
+            {/* Connecting dashed paths */}
+            <path d="M 75 45 L 75 70 L 150 32" fill="none" stroke="rgba(0,240,255,0.3)" strokeWidth="1" strokeDasharray="2 2" />
+            <path d="M 250 32 L 285 32" fill="none" stroke="rgba(189,0,255,0.3)" strokeWidth="1" />
+          </svg>
+        );
       default:
         return null;
     }
@@ -227,9 +268,13 @@ export default function Projects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-gray-400 hover:text-cyber-cyan p-1 rounded hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10"
-                          title="View GitHub Repository"
+                          title={proj.gitLink.includes("drive.google.com") ? "View Google Drive Folder" : "View GitHub Repository"}
                         >
-                          <GithubIcon className="w-4 h-4" />
+                          {proj.gitLink.includes("drive.google.com") ? (
+                            <ExternalLink className="w-4 h-4" />
+                          ) : (
+                            <GithubIcon className="w-4 h-4" />
+                          )}
                         </a>
                       )}
                       {proj.linkedInLink && (

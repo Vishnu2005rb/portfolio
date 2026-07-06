@@ -7,15 +7,13 @@ export default function Experience() {
     {
       role: "AiOps Intern",
       company: "Tarcin Robotics",
-      duration: "Present / Recent",
+      duration: "Sep 2025 – Jun 2026",
       details: [
-        "Built AI-powered candidate onboarding workflows, streamlining HR operations and reducing manual document processing.",
-        "Developed comprehensive hackathon automation systems including participant team matching and progress monitors.",
-        "Created LLM scoring systems to automate assessment validations and submission vetting.",
-        "Integrated Groq API, Google Sheets API, Gmail API, and Google Drive API into continuous automated pipelines.",
-        "Built an Event Management System from scratch featuring automated review validations and digital certificate issuance."
+        "Developed AI-powered automation workflows for intern onboarding, hackathon management, automated communication, task allocation, and AI-based scoring systems using n8n, Groq API, Google Sheets, and Drive.",
+        "Contributed to the GeoOps platform by developing a rule-based recommendation module to prioritize educational institutions using OSM, NAAC, location-based scoring, and PostgreSQL.",
+        "Developed an Event Management System featuring certificate automation and review validation processes to enhance event operations and participant verification."
       ],
-      tech: ["n8n", "Python", "Groq API", "Google APIs", "OAuth2", "AI Agents", "Event Automation"]
+      tech: ["n8n", "Python", "Groq API", "Google Sheets & Drive", "OSM", "NAAC", "PostgreSQL", "Event Automation"]
     }
   ];
 

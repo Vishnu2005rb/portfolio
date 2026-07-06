@@ -18,6 +18,7 @@ export default function Skills() {
     // Programming
     { name: "Python", category: "programming", type: "core", val: 92, glow: "cyan" },
     { name: "JavaScript", category: "programming", type: "core", val: 85, glow: "purple" },
+    { name: "SQL", category: "programming", type: "core", val: 88, glow: "cyan" },
     
     // Frameworks & Automation
     { name: "n8n", category: "automation", type: "framework", val: 95, glow: "cyan" },
@@ -26,28 +27,43 @@ export default function Skills() {
     { name: "LangChain", category: "automation", type: "framework", val: 90, glow: "cyan" },
     { name: "Zapier", category: "automation", type: "framework", val: 85, glow: "cyan" },
     { name: "Activepieces", category: "automation", type: "framework", val: 80, glow: "purple" },
+    { name: "REST APIs", category: "automation", type: "framework", val: 86, glow: "purple" },
     
     // Databases
     { name: "MySQL", category: "databases", type: "db", val: 84, glow: "purple" },
     { name: "PostgreSQL", category: "databases", type: "db", val: 86, glow: "cyan" },
+    { name: "FAISS", category: "databases", type: "db", val: 80, glow: "cyan" },
+    { name: "ChromaDB", category: "databases", type: "db", val: 82, glow: "cyan" },
     
     // AI & Concepts
     { name: "AI Agents", category: "ai", type: "concept", val: 95, glow: "cyan" },
     { name: "NLP", category: "ai", type: "concept", val: 88, glow: "cyan" },
     { name: "MCP", category: "ai", type: "concept", val: 90, glow: "cyan" },
     { name: "RAG", category: "ai", type: "concept", val: 92, glow: "cyan" },
-    { name: "Machine Learning", category: "ai", type: "concept", val: 80, glow: "purple" },
-    { name: "Deep Learning", category: "ai", type: "concept", val: 75, glow: "purple" },
+    { name: "Machine Learning", category: "ai", type: "concept", val: 82, glow: "purple" },
+    { name: "Deep Learning", category: "ai", type: "concept", val: 78, glow: "purple" },
     { name: "Prompt Engineering", category: "ai", type: "concept", val: 94, glow: "cyan" },
     { name: "Semantic Search", category: "ai", type: "concept", val: 87, glow: "purple" },
     { name: "Multi-Agent Systems", category: "ai", type: "concept", val: 90, glow: "cyan" },
+    { name: "Scikit-learn", category: "ai", type: "concept", val: 88, glow: "purple" },
+    { name: "TensorFlow", category: "ai", type: "concept", val: 80, glow: "purple" },
+    { name: "PyTorch", category: "ai", type: "concept", val: 82, glow: "purple" },
+    { name: "NumPy & Pandas", category: "ai", type: "concept", val: 86, glow: "purple" },
+    { name: "XGBoost", category: "ai", type: "concept", val: 78, glow: "purple" },
+    { name: "OpenCV", category: "ai", type: "concept", val: 76, glow: "purple" },
+    { name: "LLMs", category: "ai", type: "concept", val: 94, glow: "cyan" },
+    { name: "Fine-tuning", category: "ai", type: "concept", val: 85, glow: "cyan" },
+    { name: "Embeddings", category: "ai", type: "concept", val: 88, glow: "cyan" },
+    { name: "LangGraph", category: "ai", type: "concept", val: 90, glow: "cyan" },
+    { name: "Hugging Face (Transformers)", category: "ai", type: "concept", val: 84, glow: "cyan" },
     
     // Tools
     { name: "Git", category: "tools", type: "tool", val: 88, glow: "purple" },
     { name: "GitHub", category: "tools", type: "tool", val: 90, glow: "cyan" },
     { name: "Cursor", category: "tools", type: "tool", val: 92, glow: "cyan" },
     { name: "Antigravity", category: "tools", type: "tool", val: 85, glow: "purple" },
-    { name: "Kiro", category: "tools", type: "tool", val: 80, glow: "purple" }
+    { name: "Kiro", category: "tools", type: "tool", val: 80, glow: "purple" },
+    { name: "Docker", category: "tools", type: "tool", val: 82, glow: "purple" }
   ];
 
   const filteredSkills = activeCategory === "all" 

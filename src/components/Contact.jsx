@@ -114,13 +114,14 @@ export default function Contact() {
 
             {/* Resume Download CTA */}
             <div className="mt-8 pt-6 border-t border-white/5">
-              <button 
-                onClick={() => alert("Simulating Resume Download: resume_vishnu.pdf")}
+              <a 
+                href="/VISHNU_R_B_Resume.pdf"
+                download="VISHNU_R_B_Resume.pdf"
                 className="w-full flex items-center justify-center space-x-2 py-3 border border-cyber-cyan rounded bg-cyber-cyan/5 text-cyber-cyan hover:bg-cyber-cyan hover:text-black font-mono text-xs tracking-widest font-bold box-glow-cyan transition-all duration-300 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>DOWNLOAD_RESUME.PDF</span>
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

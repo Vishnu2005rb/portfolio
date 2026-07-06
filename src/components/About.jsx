@@ -44,17 +44,17 @@ export default function About() {
 
               <div className="text-left font-mono text-xs text-gray-500 space-y-1.5 border-b border-white/5 pb-4">
                 <p>NAME: <span className="text-white">Vishnu R B</span></p>
-                <p>CLASS: <span className="text-white">AI & Automation Architect</span></p>
+                <p>CLASS: <span className="text-white">AI & ML Engineer | Generative AI</span></p>
                 <p>LOCATION: <span className="text-white">Tamil Nadu, India</span></p>
                 <p>STATUS: <span className="text-cyber-green">ACTIVE_DEVELOPER</span></p>
               </div>
 
               <div className="text-left space-y-4">
                 <p className="text-gray-300 text-sm leading-relaxed font-sans">
-                  I am a Computer Science Engineering student at KLN College of Engineering with hands-on experience in AI agents, workflow automation, NLP, RAG systems, and scalable AI applications.
+                  I am an Aspiring AI Engineer with hands-on experience in Machine Learning, Deep Learning, NLP, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI Agents, and workflow automation.
                 </p>
                 <p className="text-gray-400 text-sm leading-relaxed font-sans">
-                  Passionate about building intelligent automation systems using modern AI technologies, APIs, and production-ready workflows. I focus on developing modular multi-agent software pipelines that eliminate repetitive operations and speed up deployment velocity.
+                  Skilled in developing AI-powered applications, training machine learning models, and building intelligent automation solutions using Python, REST APIs, and modern AI frameworks. Passionate about developing scalable AI systems and solving real-world challenges through artificial intelligence.
                 </p>
               </div>
             </div>
